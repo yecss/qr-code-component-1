@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,101 +21,88 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-      html,
-      body {
+      html,body{
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
       }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+      html {
+        font-size: 15px;
       }
-      .container {
-        width: 1440px;
-        height: 800px;
+      main {
+        width: 100vw;
+        height: 100vh;
         background-color: hsl(212, 45%, 89%);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        box-sizing: border-box;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
       }
-      .container .qrcode-wrapper {
-        width: 400px;
-        height: 600px;
+      main .qrcode-wrapper {
+        display: flex;
+        flex-direction: column;  
         background-color: hsl(0, 0%, 100%);
         padding: 20px;
         border-radius: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: flex-start;
+        max-width: 400px;
       }
       .qrcode-wrapper img {
-        width: 100%;
         border-radius: 18px;
+        width: 100%;
+      }
+      .qrcode-wrapper h1 {
+        font-size: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-indent: 1rem;
+        font-family: 'Outfit';
       }
       .qrcode-wrapper p {
+        padding-left: 10px;
+        padding-right: 10px;
         text-indent: 1rem;
-        font-size: 26px;
         font-family: 'Outfit';
-        font-weight: 700;
+        color: #000000a8;
+      }
+      /* .footer {
         text-align: center;
-      }
-      .qrcode-wrapper p:nth-of-type(2) {
-        font-weight: 400;
-        font-size: 15px;
-        color: #0000009e;
-      }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+      } */
       @media screen and (max-width: 375px) {
-        .container {
-          width: 100%;
-          height: 100%;
+        main{
+          padding: 20px;
         }
-        .container .qrcode-wrapper {
-          width: 74%;
-          height: 72%;
+        .qrcode-wrapper h1 {
+          font-size: 1rem;
         }
         .qrcode-wrapper p {
-          font-size: 20px;
-        }
-        .qrcode-wrapper p:nth-of-type(2) {
-          font-size: 16px;
+          font-size: 0.7rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <main>
       <div class="qrcode-wrapper">
         <img src="./images/image-qr-code.png" alt="" />
-        <p>Improve your front-end skills by building projects</p>
+        <h1>Improve your front-end skills by building projects</h1>
         <p>
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
       </div>
-      <div class="attribution">
+      <!-- <div class="footer">
         Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-        ></a>
-        Frontend Mentor . Coded by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        .Coded by
         <a href="#">Ye</a>
         .
-      </div>
-    </div>
+      </div> -->
+    </main>
+    
   </body>
 </html>
